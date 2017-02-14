@@ -11,5 +11,5 @@ PERLDOC_PAGER=vimpager
 PERLTIDY=$XDG_CONFIG_HOME/perltidy
 
 export EDITOR VISUAL SUDO_EDITOR MANPAGER PAGER BROWSER TERMINAL VIMINIT PERLDOC_PAGER VIMPAGER_RC PERLTIDY
-eval $(dircolors -b)
+eval $(dircolors -b $ZDOTDIR/dircolors)
 eval $(perl -I ~/perl5/lib/perl5/ -Mlocal::lib)
