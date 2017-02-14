@@ -1,0 +1,7 @@
+.*.un~
+.*.sw*
+priv
+qutebrowser/bookmarks
+.netrwhist
+tags
+.zcompdump

@@ -1,0 +1,58 @@
+compdef uri
+
+local uri_commands 
+uri_commands=( \
+    create change scheme has_recognized_scheme \
+    opaque path fragment as_string as_iri canonical \
+    secure authority path path_query query userinfo host \
+    ihost port host_port default_port \
+    media_type data \
+    file dir \
+    user password \
+    gopher_type selector search string \
+    dn attributes scope filter extensions \
+    un_path \
+    to headers \
+    group message \
+    nid nss )
+
+_arguments \
+    '1: :->cmds' \
+    '*:: :->args'
+
+
+case $state in
+    (cmds)
+        _values 'uri commands'  $uri_commands
+        ;;
+    (args)
+        _arguments \
+            '--scheme=-:' \
+            '--path=-:' \
+            '--opaque=-[Opaque portion of URI (between scheme: and fragment)]:' \
+            '--fragment=-[Escaped URI fragment (#foo)]:' \
+            '--authority=-:' \
+            '--query=-[Escaped query component]:' \
+            '--userinfo=-[e.g. username:password]:' \
+            '--port=-:' \
+            '--host_port=-[host:port]:' \
+            '--media_type=-[Media type for data: URIs]:' \
+            '--data=-[Data for data: URIs]:' \
+            '--file=-[File for file:, ftp:, etc.]:' \
+            '--gopher_type=-:' \
+            '--selector=-[Gopher selector]:' \
+            '--search=-[Gopher query]:' \
+            '--string=-[Gopher string]:' \
+            '--dn=-[LDAP DN]' \
+            '--attributes=-[LDAP attributes]' \
+            '--scope=-[LDAP search scope]:' \
+            '--extensions=-[LDAP extensions]:' \
+            '--un_path=-[Local socket path for ldapi]:' \
+            '--to=-[Address for mailto:]:' \
+            '--headers=-[mailto: headers]:' \
+            '--group=-[Newsgroup]:' \
+            '--message=-[Newsgroup message]:' \
+            '--nid=-[Namespace identifier for urn:]:' \
+            '--nss=-[Namespace-specific string for urn:]:'
+        ;;
+esac

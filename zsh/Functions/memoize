@@ -1,0 +1,11 @@
+if ((! $+MEMOIZE)) {
+    declare -Ag MEMOIZE
+}
+
+if (($+MEMOIZE[$*])) {
+    printf '%s' "$MEMOIZE[$*]"
+    return
+}
+
+MEMOIZE[$*]=$(eval $*)
+printf '%s' "$MEMOIZE[$*]"
