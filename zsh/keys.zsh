@@ -15,4 +15,7 @@ KBDFILE=$ZDOTDIR/zkbd/$TERM-$VENDOR-$OSTYPE
 [[ -n ${key[ScrollUp]} ]]   && bindkey "${key[ScrollUp]}"   up-history
 [[ -n ${key[ScrollDown]} ]] && bindkey "${key[ScrollDown]}" down-history
 
-bindkey '^R' history-incremental-search-backward
+zle -N fuzzy-history fuzzy_history
+bindkey '^R' fuzzy-history
+zle -N fuzzy-dirstack fuzzy_dirstack
+bindkey '^B' fuzzy-dirstack

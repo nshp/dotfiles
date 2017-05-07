@@ -4,3 +4,6 @@
 [submodule "vim/bundle/w3m.vim"]
 	path = vim/bundle/w3m.vim
 	url = https://github.com/yuratomo/w3m.vim.git
+[submodule "vim/vim-surround"]
+	path = vim/vim-surround
+	url = https://github.com/tpope/vim-surround.git

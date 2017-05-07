@@ -7,7 +7,7 @@ SAVEHIST=10000000
 REPORTTIME=60
 
 fpath=($ZDOTDIR/Functions $fpath)
-path=($HOME/bin /usr/bin/vendor_perl $path)
+path=($HOME/bin /usr/bin/vendor_perl /usr/bin/core_perl $path)
 
 # Expand ~zsh to $ZDOTDIR
 hash -d zsh=$ZDOTDIR

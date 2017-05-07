@@ -1,0 +1,2 @@
+set guioptions-=m guioptions-=T guioptions-=r guioptions-=R guioptions-=l guioptions-=L guioptions-=b
+set guiheadroom=0

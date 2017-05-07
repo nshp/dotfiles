@@ -1,4 +1,4 @@
-compdef uri
+#compdef uri
 
 local uri_commands 
 uri_commands=( \
