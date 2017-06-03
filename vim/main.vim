@@ -47,6 +47,8 @@ set browsedir=buffer             " :browse the current buffer's directory
 " TODO: set cinoptions=:0        " for C, don't indent case statements
 set list                         " turn on list mode to show invisible chars
 set listchars=trail:-,tab:>-     " limit list to trailing whitespace and tabs
+set tildeop                      " ~ becomes a real operator
+set conceallevel=1               " conceal things if possible
 "" }}}
 "" {{{ Autocmds
 " :make hooks to display the quickfix window automatically
@@ -125,5 +127,6 @@ vnoremap <leader>p <esc>:call Paste(visualmode())<CR>
 "" {{{ etc
 " Slimv configuration for tmux
 let g:slimv_browser_cmd = 'tmux split-window -h w3m'
+let g:rust_conceal = 1
 "" }}}
 " vim:foldmethod=marker:foldlevel=0
